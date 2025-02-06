@@ -173,8 +173,9 @@ jobs:
       # All Other dependencies
       - name: Install other Suggested dependencies
         run: |
-          BiocManager::install(c('basilisk'))
-          install.packages(c('reticulate'))
+          BiocManager::install('basilisk')
+          install.packages('reticulate')
+        shell: Rscript {0}
           
       ## R CMD Check
       - name: Run CMD check
